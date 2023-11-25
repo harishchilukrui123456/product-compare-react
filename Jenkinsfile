@@ -36,7 +36,7 @@ pipeline {
                 // Deploy your React app to your hosting platform (e.g., AWS S3, Netlify, etc.)
                 // Example: Deploy to AWS S3
                 sh '''
-                    aws s3 sync build/ s3://test.cloudlinuxtrends.online
+                    aws s3 sync build/ bucketname
                 '''
                 // Replace 'your-bucket-name' and 'your-distribution-id' with your AWS details
             }
