@@ -1,5 +1,13 @@
 pipeline {
     agent any
+
+    environment {
+        NODEJS_VERSION = '18' // Define Node.js version
+    }
+    
+    tools {
+        nodejs "${NODEJS_VERSION}" // Specify Node.js version to be used
+    }
     
     stages {
         stage('Checkout') {
@@ -8,6 +16,8 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/harishchilukrui123456/product-compare-react.git'
             }
         }
+
+        
         
         stage('Install dependencies') {
             steps {
