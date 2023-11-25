@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout your code from your version control system (e.g., Git)
-                git branch: 'main', url: 'https://github.com/harishchilukrui123456/product-compare-react.git'
+                git branch: 'master', url: 'https://github.com/harishchilukrui123456/product-compare-react.git'
             }
         }
         
